@@ -647,13 +647,12 @@
           id="contact-form"
           action="https://formsubmit.co/mohamed.elhaddad.cs@gmail.com"
           method="POST"
-          novalidate
         >
           <!-- FormSubmit Hidden Configuration Fields -->
           <input type="hidden" name="_subject" value="New Portfolio Inquiry — mohamedalhaddad.com" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://mohamedalhaddad.com/#contact" />
+          <input type="hidden" name="_next" value="https://mohamedalhaddad.com/?sent=true#contact" />
           <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="form-field">
@@ -667,7 +666,6 @@
               autocomplete="name"
               required
             />
-            <span class="field-error" id="error-name" role="alert"></span>
           </div>
 
           <div class="form-field">
@@ -681,7 +679,18 @@
               autocomplete="email"
               required
             />
-            <span class="field-error" id="error-email" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-phone" class="sr-only">Phone number (optional)</label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              class="form-input"
+              placeholder="Phone Number (Optional)"
+              autocomplete="tel"
+            />
           </div>
 
           <div class="form-field">
@@ -705,7 +714,6 @@
               placeholder="YOUR MESSAGE*"
               required
             ></textarea>
-            <span class="field-error" id="error-message" role="alert"></span>
           </div>
 
           <div class="form-actions">
