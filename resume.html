@@ -20,6 +20,64 @@
   />
 
   <link rel="stylesheet" href="css/resume.css" />
+  <style>
+    .resume-contact-rows {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .resume-contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4px 10px;
+      font-size: 0.83rem;
+      color: #2d2d2d;
+    }
+
+    .resume-contact-row a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .resume-contact-row a:hover {
+      border-bottom-color: #000000;
+    }
+
+    .resume-contact-row .contact-sep {
+      color: #999999;
+      user-select: none;
+    }
+
+    @media (min-width: 640px) {
+      .resume-contact-row {
+        flex-wrap: nowrap;
+      }
+    }
+
+    @media print {
+      .resume-contact-rows {
+        gap: 2.5pt;
+      }
+
+      .resume-contact-row {
+        flex-wrap: nowrap;
+        font-size: 8.5pt;
+        gap: 0 7pt;
+      }
+
+      .resume-contact-row a {
+        color: inherit !important;
+        text-decoration: none !important;
+        border-bottom: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Screen-Only Action Bar -->
@@ -40,34 +98,39 @@
     <header class="resume-header">
       <h1 class="resume-name">MOHAMED ALHADDAD</h1>
       <p class="resume-role">Computer Science Undergraduate</p>
-      <div class="resume-contact-line">
-        <span>Cairo, Egypt</span>
-        <span class="contact-sep" aria-hidden="true">|</span>
-        <a href="mailto:mohamed.elhaddad.cs@gmail.com">mohamed.elhaddad.cs@gmail.com</a>
-        <span class="contact-sep" aria-hidden="true">|</span>
-        <a
-          href="https://www.linkedin.com/in/mohamed-el-haddad-cs/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          linkedin.com/in/mohamed-el-haddad-cs
-        </a>
-        <span class="contact-sep" aria-hidden="true">|</span>
-        <a
-          href="https://github.com/moHaddad1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github.com/moHaddad1
-        </a>
-        <span class="contact-sep" aria-hidden="true">|</span>
-        <a
-          href="https://mohamedalhaddad.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          mohamedalhaddad.com
-        </a>
+      <div class="resume-contact-rows" aria-label="Contact details">
+        <div class="resume-contact-row">
+          <span>Cairo, Egypt</span>
+          <span class="contact-sep" aria-hidden="true">|</span>
+          <a href="tel:+201028299313">+20 102 829 9313</a>
+          <span class="contact-sep" aria-hidden="true">|</span>
+          <a href="mailto:mohamed.elhaddad.cs@gmail.com">mohamed.elhaddad.cs@gmail.com</a>
+        </div>
+        <div class="resume-contact-row">
+          <a
+            href="https://mohamedalhaddad.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            mohamedalhaddad.com
+          </a>
+          <span class="contact-sep" aria-hidden="true">|</span>
+          <a
+            href="https://www.linkedin.com/in/mohamed-alhaddad-cs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/mohamed-alhaddad-cs
+          </a>
+          <span class="contact-sep" aria-hidden="true">|</span>
+          <a
+            href="https://github.com/moHaddad1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/moHaddad1
+          </a>
+        </div>
       </div>
     </header>
 
