@@ -1,0 +1,40 @@
+/* ==========================================================================
+   DESIGN TOKENS — mohamedalhaddad.com
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --bg-hero-light: #d7d7d7;
+  --bg-hero-dark: #000000;
+  --bg-studio-glow: #1e1e1e;
+  --bg-studio-mid: #0a0a0a;
+  --bg-banner-dark: #1d1d1d;
+  --bg-portfolio-dark: #1a1a1a;
+  --bg-card-dark: #222428;
+  --bg-light-start: #efefef;
+  --bg-light-mid: #e5e5e5;
+  --bg-light-end: #d7d7d7;
+  --bg-social-box: #c4c4c4;
+
+  /* Typography Colors */
+  --text-black: #000000;
+  --text-dark: #1a1a1a;
+  --text-body: #2d2d2d;
+  --text-muted: #5a5a5a;
+  --text-white: #ffffff;
+  --text-light-muted: #b8b8b8;
+
+  /* Status Accents */
+  --accent-error: #b71c1c;
+  --accent-success: #1b5e20;
+
+  /* Font Families */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-display: 'Raleway', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  /* Motion & Layout */
+  --transition-fast: 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-smooth: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  --container-max: 1120px;
+}

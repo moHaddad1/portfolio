@@ -1,0 +1,404 @@
+/* ==========================================================================
+   RESUME PAGE STYLESHEET — 1-PAGE PRINT-OPTIMIZED A4 / LETTER LAYOUT
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: 28px 20px 56px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= TOP ACTION TOOLBAR ================= */
+.resume-toolbar {
+  max-width: 816px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #333333;
+  padding: 8px 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: #000000;
+  transform: translateX(-3px);
+}
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #111111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.print-btn:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+.print-btn:focus-visible,
+.back-link:focus-visible,
+.resume-sheet a:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+/* ================= CRISP A4 / LETTER RESUME SHEET ================= */
+.resume-sheet {
+  max-width: 816px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 48px 54px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #000000;
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.resume-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-indent: 0.14em;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.resume-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #4a4a4a;
+  margin-bottom: 12px;
+}
+
+.resume-contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 7px;
+  font-size: 0.78rem;
+  color: #2d2d2d;
+}
+
+.resume-contact-line a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.resume-contact-line a:hover {
+  border-bottom-color: #000000;
+}
+
+.contact-sep {
+  color: #888888;
+}
+
+/* Sections */
+.resume-section {
+  margin-bottom: 20px;
+}
+
+.resume-section:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #000000;
+  padding-bottom: 5px;
+  margin-bottom: 11px;
+  border-bottom: 1.5px solid #d4d4d4;
+}
+
+.resume-summary {
+  font-size: 0.91rem;
+  line-height: 1.65;
+  color: #262626;
+}
+
+/* Technical Skills List */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #262626;
+}
+
+.skills-list strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Projects & Education Entries */
+.resume-entry {
+  margin-bottom: 14px;
+}
+
+.resume-entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-bottom: 4px;
+}
+
+.entry-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.entry-meta {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #555555;
+}
+
+.entry-desc {
+  font-size: 0.89rem;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+.entry-bullets {
+  margin-left: 18px;
+  font-size: 0.89rem;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+.entry-bullets li + li {
+  margin-top: 3px;
+}
+
+.training-list {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.training-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 0.89rem;
+  color: #262626;
+}
+
+.training-title {
+  font-weight: 600;
+  color: #000000;
+}
+
+.training-meta {
+  font-size: 0.83rem;
+  color: #555555;
+  font-weight: 600;
+}
+
+/* Languages */
+.resume-languages {
+  font-size: 0.9rem;
+  color: #262626;
+}
+
+.resume-languages strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 720px) {
+  body {
+    padding: 18px 12px 36px;
+  }
+
+  .resume-toolbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .back-link {
+    position: static;
+  }
+
+  .resume-sheet {
+    padding: 28px 22px;
+  }
+
+  .resume-name {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    text-indent: 0.1em;
+  }
+}
+
+/* ================= STRICT 1-PAGE PRINT / PDF STYLES ================= */
+@page {
+  margin: 0.4in;
+  size: auto;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-toolbar {
+    display: none !important;
+  }
+
+  .resume-sheet {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-top: none !important;
+  }
+
+  .resume-header {
+    padding-bottom: 10pt;
+    margin-bottom: 12pt;
+    border-bottom: 1.5pt solid #000000;
+  }
+
+  .resume-name {
+    font-size: 18pt;
+    margin-bottom: 2pt;
+  }
+
+  .resume-role {
+    font-size: 9.5pt;
+    margin-bottom: 6pt;
+  }
+
+  .resume-contact-line {
+    font-size: 8.5pt;
+    gap: 3pt 6pt;
+  }
+
+  .resume-section {
+    margin-bottom: 11pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-section-title {
+    font-size: 9pt;
+    padding-bottom: 3pt;
+    margin-bottom: 6pt;
+  }
+
+  .resume-summary,
+  .skills-list,
+  .entry-desc,
+  .entry-bullets,
+  .training-item,
+  .resume-languages {
+    font-size: 9.2pt;
+    line-height: 1.45;
+  }
+
+  .entry-title {
+    font-size: 9.5pt;
+  }
+
+  .entry-meta,
+  .training-meta {
+    font-size: 8.5pt;
+  }
+
+  .resume-entry {
+    margin-bottom: 8pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .skills-list,
+  .training-list {
+    gap: 3.5pt;
+  }
+}

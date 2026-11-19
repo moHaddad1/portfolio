@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Mohamed Alhaddad — Computer Science Undergraduate at The British University in Egypt (BUE) and Aspiring Full-Stack Developer. Portfolio showcasing relational database engineering and user-centered web design."
+  />
+  <meta name="author" content="Mohamed Alhaddad" />
+  <title>Mohamed Alhaddad | Computer Science &amp; Full-Stack Developer</title>
+
+  <!-- Crisp Geometric "MH" SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts: Montserrat, Raleway, Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&family=Raleway:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body id="top">
+  <!-- ================= NAVIGATION ================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand-mark" aria-label="Mohamed Alhaddad — Back to top">
+        <span class="brand-monogram">MH</span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About me</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li>
+            <a
+              href="resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link"
+            >
+              Resume <span aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+          <li><a href="#contact" class="nav-cta">CONTACT ME</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" aria-label="Introduction">
+      <!-- Right Dark Studio Portrait Panel with Subtle Charcoal Radial Spotlight -->
+      <div class="hero-right-stage">
+        <div class="hero-portrait-wrap">
+          <img
+            src="assets/images/me.jpeg"
+            alt="Mohamed Alhaddad — Computer Science Undergraduate and Aspiring Full-Stack Developer"
+            class="hero-portrait"
+          />
+        </div>
+      </div>
+
+      <!-- Crisp Light Cool-Gray Left Diagonal Panel -->
+      <div class="hero-diagonal-bg" aria-hidden="true"></div>
+
+      <!-- Left Panel Typography & Social Links -->
+      <div class="hero-inner">
+        <div class="hero-left">
+          <p class="hero-intro reveal-hero">Hi, I am</p>
+          <h1 class="hero-name reveal-hero">Mohamed Alhaddad</h1>
+          <p class="hero-subtitle reveal-hero">
+            Computer Science Undergraduate <span class="divider-pipe" aria-hidden="true">|</span> Aspiring Full-Stack Developer
+          </p>
+
+          <div class="hero-actions reveal-hero">
+            <a href="#portfolio" class="hero-btn hero-btn--solid">VIEW PORTFOLIO</a>
+            <a
+              href="resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-btn hero-btn--outline"
+            >
+              RESUME <span aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+
+          <div class="hero-socials reveal-hero" aria-label="Social and contact links">
+            <a
+              href="https://www.linkedin.com/in/mohamed-el-haddad-cs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-box"
+              aria-label="Mohamed Alhaddad on LinkedIn"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
+              </svg>
+            </a>
+
+            <a
+              href="https://github.com/moHaddad1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-box"
+              aria-label="Mohamed Alhaddad on GitHub"
+              title="GitHub"
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+              </svg>
+            </a>
+
+            <a
+              href="#contact"
+              class="social-box"
+              aria-label="Scroll to contact section"
+              title="Email Mohamed Alhaddad"
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DARK PROFILE BANNER ================= -->
+    <section class="profile-banner" aria-label="Engineering Profile">
+      <div class="banner-watermark" aria-hidden="true">
+        <span class="watermark-code">&lt;MH/&gt;</span>
+      </div>
+      <div class="container banner-content reveal">
+        <h2 class="banner-heading">ENGINEERING PROFILE</h2>
+        <p class="banner-text">
+          Second-year Computer Science undergraduate at The British University in Egypt (BUE), ranked 25th in the preparatory year. Focused on mastering full-stack web engineering, clean user interfaces, and scalable relational database systems.
+        </p>
+        <a href="#about" class="line-action-btn line-action-btn--light">READ MORE</a>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ME SECTION ================= -->
+    <section class="section-light about-section" id="about">
+      <div class="container">
+        <div class="section-header-wrap reveal">
+          <h2 class="boxed-heading">ABOUT ME</h2>
+        </div>
+
+        <p class="section-lead reveal">
+          My journey in software began with mastering semantic HTML5 structure, responsive CSS3 architecture, and normalized relational database design in SQL. Today, I am bridging frontend craftsmanship with full-stack backend engineering and systems problem-solving—building clean, reliable software and preparing for international remote software engineering roles.
+        </p>
+
+        <div class="explore-marker reveal">
+          <a href="#skills" class="line-action-btn">EXPLORE</a>
+        </div>
+
+        <!-- Minimalist Geometric Section Divider -->
+        <div class="geo-divider reveal" aria-hidden="true">
+          <svg viewBox="0 0 180 18" width="180" height="18" fill="none">
+            <line x1="0" y1="9" x2="62" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+            <polyline points="68,14 76,4 84,14 92,4 100,14 108,4 116,14" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="122" y1="9" x2="180" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+          </svg>
+        </div>
+
+        <!-- 3-Column Feature Grid -->
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="54" height="54" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="6" y="10" width="52" height="38" rx="3" />
+                <line x1="6" y1="20" x2="58" y2="20" />
+                <circle cx="13" cy="15" r="1.5" fill="currentColor" />
+                <circle cx="19" cy="15" r="1.5" fill="currentColor" />
+                <path d="M24 29 L17 35 L24 41" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M40 29 L47 35 L40 41" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="34" y1="27" x2="30" y2="43" stroke-linecap="round" />
+                <line x1="22" y1="54" x2="42" y2="54" stroke-linecap="round" />
+                <line x1="32" y1="48" x2="32" y2="54" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="about-card-title">FRONTEND &amp; UI</h3>
+            <p class="about-card-text">
+              Structuring semantic HTML5 pages, responsive CSS3 layouts, visual hierarchy, and user-centered interfaces.
+            </p>
+          </article>
+
+          <article class="about-card reveal">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="54" height="54" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="32" cy="14" rx="20" ry="7" />
+                <path d="M12 14 v12 c0 3.9 9 7 20 7 s20-3.1 20-7 V14" />
+                <path d="M12 26 v12 c0 3.9 9 7 20 7 s20-3.1 20-7 V26" />
+                <path d="M12 38 v12 c0 3.9 9 7 20 7 s20-3.1 20-7 V38" />
+              </svg>
+            </div>
+            <h3 class="about-card-title">DATABASES &amp; BACKEND</h3>
+            <p class="about-card-text">
+              Designing normalized relational database schemas, integrity constraints, and SQL queries, while expanding into Node.js and PostgreSQL.
+            </p>
+          </article>
+
+          <article class="about-card reveal">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" width="54" height="54" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="32" cy="32" r="10" />
+                <path d="M32 10 v6 M32 48 v6 M10 32 h6 M48 32 h6 M16.4 16.4 l4.3 4.3 M43.3 43.3 l4.3 4.3 M47.6 16.4 l-4.3 4.3 M20.7 43.3 l-4.3 4.3" stroke-linecap="round" />
+                <circle cx="32" cy="32" r="20" stroke-dasharray="4 4" />
+              </svg>
+            </div>
+            <h3 class="about-card-title">SOFTWARE ENGINEERING</h3>
+            <p class="about-card-text">
+              Applying Object-Oriented Programming (OOP) in C++, structured debugging, and version control workflows to build real-world applications.
+            </p>
+          </article>
+        </div>
+
+        <div class="geo-divider geo-divider--bottom reveal" aria-hidden="true">
+          <svg viewBox="0 0 180 18" width="180" height="18" fill="none">
+            <line x1="0" y1="9" x2="62" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+            <polyline points="68,14 76,4 84,14 92,4 100,14 108,4 116,14" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="122" y1="9" x2="180" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION (OFFICIAL DEVICON LOGOS) ================= -->
+    <section class="section-light skills-section" id="skills">
+      <div class="container">
+        <div class="section-header-wrap reveal">
+          <h2 class="boxed-heading">SKILLS</h2>
+        </div>
+
+        <!-- Tier 1: USING NOW -->
+        <div class="skills-tier reveal">
+          <h3 class="skills-tier-heading">USING NOW:</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt="HTML5 logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">HTML5</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt="CSS3 logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">CSS3</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="assets/images/ssms.png"
+                  alt="SQL Server Management Studio"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">SQL SERVER (SSMS)</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                  alt="C++ logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">C++ (OOP)</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                  alt="VS Code logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">VS CODE</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                  alt="Git logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">GIT</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt="GitHub logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">GITHUB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 2: LEARNING -->
+        <div class="skills-tier reveal">
+          <h3 class="skills-tier-heading">LEARNING:</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt="JavaScript logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">JAVASCRIPT (ES6+)</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">NODE.JS</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  alt="React logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">REACT</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL logo"
+                  class="skill-logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <span class="skill-label">POSTGRESQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 3: LANGUAGES -->
+        <div class="skills-tier reveal">
+          <h3 class="skills-tier-heading">LANGUAGES:</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="48" height="48" fill="none">
+                  <circle cx="24" cy="24" r="22" fill="#1A1A1A" />
+                  <text x="24" y="29" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="700" font-size="13">AR</text>
+                </svg>
+              </div>
+              <span class="skill-label skill-label--single">ARABIC (NATIVE)</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="48" height="48" fill="none">
+                  <circle cx="24" cy="24" r="22" fill="#1A1A1A" />
+                  <text x="24" y="29" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="700" font-size="13">EN</text>
+                </svg>
+              </div>
+              <span class="skill-label skill-label--single">ENGLISH (INTERMEDIATE)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO SECTION (2 CURATED PROJECTS) ================= -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="portfolio-banner">
+        <div class="portfolio-banner-pattern" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-header-wrap reveal">
+            <h2 class="boxed-heading boxed-heading--light">PORTFOLIO</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-body">
+        <div class="container">
+          <div class="portfolio-filters reveal" role="tablist" aria-label="Filter projects by category">
+            <button
+              type="button"
+              class="filter-btn is-active"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              ALL
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-filter="database-systems"
+              role="tab"
+              aria-selected="false"
+            >
+              DATABASE &amp; SYSTEMS
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-filter="ui-ux-web"
+              role="tab"
+              aria-selected="false"
+            >
+              UI/UX &amp; WEB
+            </button>
+          </div>
+
+          <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Project 1: AutoSphere Relational Database -->
+            <article class="project-card reveal" data-category="database-systems">
+              <div class="project-visual project-visual--db" aria-hidden="true">
+                <svg viewBox="0 0 400 210" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                  <defs>
+                    <pattern id="grid-db" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                    </pattern>
+                  </defs>
+                  <rect width="400" height="210" fill="#121418" />
+                  <rect width="400" height="210" fill="url(#grid-db)" />
+
+                  <!-- USERS Relational Table -->
+                  <rect x="26" y="28" width="144" height="102" rx="4" fill="#1B2027" stroke="rgba(255,255,255,0.65)" stroke-width="1.3" />
+                  <rect x="26" y="28" width="144" height="24" rx="4" fill="#252C36" />
+                  <line x1="26" y1="52" x2="170" y2="52" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+                  <text x="98" y="44" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="9.5" font-weight="700">USERS</text>
+                  <text x="36" y="69" fill="#90CAF9" font-family="monospace" font-size="8.5" font-weight="700">PK</text>
+                  <text x="56" y="69" fill="#E6ECF5" font-family="monospace" font-size="8.5">UserID INT</text>
+                  <text x="36" y="86" fill="#8A94A6" font-family="monospace" font-size="8.5">UQ Email VARCHAR</text>
+                  <text x="36" y="103" fill="#8A94A6" font-family="monospace" font-size="8.5">CK AccountRole</text>
+                  <text x="36" y="120" fill="#8A94A6" font-family="monospace" font-size="8.5">   CreatedAt DATE</text>
+
+                  <!-- 1-to-Many Foreign Key Relationship Connector -->
+                  <line x1="170" y1="66" x2="226" y2="66" stroke="#90CAF9" stroke-width="1.6" />
+                  <line x1="178" y1="60" x2="178" y2="72" stroke="#90CAF9" stroke-width="1.6" />
+                  <line x1="216" y1="66" x2="226" y2="60" stroke="#90CAF9" stroke-width="1.5" />
+                  <line x1="216" y1="66" x2="226" y2="72" stroke="#90CAF9" stroke-width="1.5" />
+                  <text x="198" y="57" text-anchor="middle" fill="#90CAF9" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="700">1 : N</text>
+
+                  <!-- VEHICLES Relational Table -->
+                  <rect x="226" y="28" width="148" height="118" rx="4" fill="#1B2027" stroke="rgba(255,255,255,0.65)" stroke-width="1.3" />
+                  <rect x="226" y="28" width="148" height="24" rx="4" fill="#252C36" />
+                  <line x1="226" y1="52" x2="374" y2="52" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+                  <text x="300" y="44" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="9.5" font-weight="700">VEHICLES</text>
+                  <text x="236" y="69" fill="#90CAF9" font-family="monospace" font-size="8.5" font-weight="700">PK</text>
+                  <text x="256" y="69" fill="#E6ECF5" font-family="monospace" font-size="8.5">VehicleID INT</text>
+                  <text x="236" y="86" fill="#FFCC80" font-family="monospace" font-size="8.5" font-weight="700">FK</text>
+                  <text x="256" y="86" fill="#E6ECF5" font-family="monospace" font-size="8.5">SellerID INT</text>
+                  <text x="236" y="103" fill="#8A94A6" font-family="monospace" font-size="8.5">UQ VIN CHAR(17)</text>
+                  <text x="236" y="120" fill="#8A94A6" font-family="monospace" font-size="8.5">CK Price DECIMAL</text>
+                  <text x="236" y="137" fill="#8A94A6" font-family="monospace" font-size="8.5">   VehicleType</text>
+
+                  <!-- SQL Constraint Bar -->
+                  <rect x="26" y="160" width="348" height="28" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" />
+                  <text x="38" y="177" fill="#90CAF9" font-family="monospace" font-size="8.5">FOREIGN KEY (SellerID) REFERENCES USERS(UserID)</text>
+                </svg>
+                <div class="project-hover-overlay">
+                  <span class="overlay-badge">SSMS &bull; RELATIONAL SCHEMA &bull; SQL</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-tag">Database &amp; Systems</span>
+                <h3 class="project-title">AutoSphere — Vehicle Marketplace Database</h3>
+                <p class="project-description">
+                  Designed the conceptual relational schema, specialization hierarchies, and data integrity constraints for core USER and VEHICLE entities, implemented in Microsoft SQL Server (SSMS).
+                </p>
+              </div>
+            </article>
+
+            <!-- Project 2: Restaurant Reservation App UX & PACT Study -->
+            <article class="project-card reveal" data-category="ui-ux-web">
+              <div class="project-visual project-visual--ux" aria-hidden="true">
+                <svg viewBox="0 0 400 210" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                  <rect width="400" height="210" fill="#131519" />
+
+                  <!-- Phone Mockup 1: Discover & Select Slot -->
+                  <rect x="64" y="20" width="114" height="170" rx="14" fill="#1C1F25" stroke="rgba(255,255,255,0.72)" stroke-width="1.5" />
+                  <line x1="103" y1="30" x2="139" y2="30" stroke="rgba(255,255,255,0.35)" stroke-width="2.2" stroke-linecap="round" />
+
+                  <rect x="76" y="42" width="90" height="28" rx="4" fill="#252A33" />
+                  <text x="84" y="55" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="700">BISTRO NOIR</text>
+                  <text x="84" y="65" fill="#9AA4B2" font-family="Open Sans, sans-serif" font-size="6.8">Mediterranean &bull; 4.8&#9733;</text>
+
+                  <text x="76" y="84" fill="#B8C0CC" font-family="Montserrat, sans-serif" font-size="6.8" font-weight="700">AVAILABLE TIMES</text>
+                  <rect x="76" y="90" width="42" height="20" rx="3" fill="rgba(255,255,255,0.1)" />
+                  <text x="97" y="103" text-anchor="middle" fill="#D7D7D7" font-family="Montserrat, sans-serif" font-size="7">19:00</text>
+                  <rect x="124" y="90" width="42" height="20" rx="3" fill="#FFFFFF" />
+                  <text x="145" y="103" text-anchor="middle" fill="#000000" font-family="Montserrat, sans-serif" font-size="7" font-weight="800">19:30</text>
+
+                  <rect x="76" y="118" width="90" height="24" rx="3" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" />
+                  <text x="121" y="133" text-anchor="middle" fill="#D7D7D7" font-family="Open Sans, sans-serif" font-size="7.5">2 Guests &bull; Terrace</text>
+
+                  <rect x="76" y="152" width="90" height="22" rx="11" fill="#90CAF9" />
+                  <text x="121" y="166" text-anchor="middle" fill="#000000" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="800">RESERVE TABLE</text>
+
+                  <!-- Flow Connector Arrow -->
+                  <line x1="184" y1="105" x2="212" y2="105" stroke="#90CAF9" stroke-width="1.6" stroke-dasharray="3 3" />
+                  <polyline points="207,100 213,105 207,110" fill="none" stroke="#90CAF9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <!-- Phone Mockup 2: Booking Confirmed -->
+                  <rect x="220" y="20" width="114" height="170" rx="14" fill="#1C1F25" stroke="rgba(255,255,255,0.48)" stroke-width="1.5" />
+                  <line x1="259" y1="30" x2="295" y2="30" stroke="rgba(255,255,255,0.35)" stroke-width="2.2" stroke-linecap="round" />
+
+                  <circle cx="277" cy="64" r="16" fill="rgba(144,202,249,0.16)" stroke="#90CAF9" stroke-width="1.6" />
+                  <polyline points="270,64 275,69 285,59" fill="none" stroke="#90CAF9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <text x="277" y="96" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="8" font-weight="700">TABLE CONFIRMED</text>
+                  <text x="277" y="109" text-anchor="middle" fill="#9AA4B2" font-family="Open Sans, sans-serif" font-size="7">Fri &bull; 19:30 &bull; Table 12</text>
+
+                  <rect x="234" y="122" width="86" height="28" rx="4" fill="#252A33" />
+                  <text x="277" y="135" text-anchor="middle" fill="#D7D7D7" font-family="Montserrat, sans-serif" font-size="6.8" font-weight="600">BISTRO NOIR</text>
+                  <text x="277" y="145" text-anchor="middle" fill="#8A94A6" font-family="Open Sans, sans-serif" font-size="6.5">2 Guests &bull; Terrace</text>
+
+                  <rect x="234" y="158" width="86" height="18" rx="9" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.35)" />
+                  <text x="277" y="170" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="6.8" font-weight="700">VIEW PASS</text>
+                </svg>
+                <div class="project-hover-overlay">
+                  <span class="overlay-badge">UX RESEARCH &bull; PACT &bull; USER FLOWS</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-tag">UI/UX &amp; Web</span>
+                <h3 class="project-title">Restaurant Reservation App — UX &amp; PACT Study</h3>
+                <p class="project-description">
+                  Conducted comparative usability evaluations of OpenTable and Resy, performed PACT analysis, and designed intuitive user flows for a mobile table-booking application.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <p class="portfolio-more reveal">And many more to come!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="section-light contact-section" id="contact">
+      <div class="container">
+        <div class="section-header-wrap reveal">
+          <h2 class="boxed-heading">CONTACT</h2>
+        </div>
+
+        <p class="section-lead reveal">
+          Open to software engineering internships, collaborative builds, and junior full-stack or frontend web opportunities. Send a message below and let&rsquo;s build something meaningful.
+        </p>
+
+        <div class="geo-divider reveal" aria-hidden="true">
+          <svg viewBox="0 0 180 18" width="180" height="18" fill="none">
+            <line x1="0" y1="9" x2="62" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+            <polyline points="68,14 76,4 84,14 92,4 100,14 108,4 116,14" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="122" y1="9" x2="180" y2="9" stroke="#1A1A1A" stroke-width="1.6" />
+          </svg>
+        </div>
+
+        <form
+          class="contact-form reveal"
+          id="contact-form"
+          action="https://formsubmit.co/ajax/mohamed.elhaddad.cs@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit Hidden Configuration Fields -->
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="New Portfolio Inquiry — mohamedalhaddad.com" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-field">
+            <label for="contact-name" class="sr-only">Enter your name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="Name"
+              class="form-input"
+              placeholder="ENTER YOUR NAME*"
+              autocomplete="name"
+              required
+            />
+            <span class="field-error" id="error-name" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email" class="sr-only">Enter your email</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="Email"
+              class="form-input"
+              placeholder="ENTER YOUR EMAIL*"
+              autocomplete="email"
+              required
+            />
+            <span class="field-error" id="error-email" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject" class="sr-only">Subject</label>
+            <input
+              type="text"
+              id="contact-subject"
+              name="Subject"
+              class="form-input"
+              placeholder="SUBJECT"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message" class="sr-only">Your message</label>
+            <textarea
+              id="contact-message"
+              name="Message"
+              class="form-input form-textarea"
+              rows="5"
+              placeholder="YOUR MESSAGE*"
+              required
+            ></textarea>
+            <span class="field-error" id="error-message" role="alert"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" id="submit-btn">SUBMIT</button>
+          </div>
+
+          <div
+            class="form-status"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <polyline points="17 11 12 6 7 11" />
+          <polyline points="17 18 12 13 7 18" />
+        </svg>
+        <span>BACK TO TOP</span>
+      </a>
+
+      <div class="footer-socials" aria-label="Footer social links">
+        <a
+          href="https://www.linkedin.com/in/mohamed-el-haddad-cs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="Mohamed Alhaddad on LinkedIn"
+          title="LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
+          </svg>
+        </a>
+
+        <a
+          href="https://github.com/moHaddad1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="Mohamed Alhaddad on GitHub"
+          title="GitHub"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+          </svg>
+        </a>
+
+        <a
+          href="#contact"
+          class="footer-social-link"
+          aria-label="Email Mohamed Alhaddad"
+          title="Contact Form"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer-copy">&copy; 2026 Mohamed Alhaddad. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modular JavaScript -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
