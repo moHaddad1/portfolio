@@ -1,13 +1,15 @@
 /**
  * Contact Form Module
- * Performs client-side validation and submits clean table-formatted emails
- * via FormSubmit's AJAX JSON endpoint.
+ * Performs client-side validation, submits via FormSubmit's AJAX JSON endpoint,
+ * and falls back seamlessly to native POST submission for first-time activation
+ * or ad-blocker/CORS interference.
  */
 
 (function (app) {
   'use strict';
 
-  const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/mohamed.elhaddad.cs@gmail.com';
+  const OWNER_EMAIL = 'mohamed.elhaddad.cs@gmail.com';
+  const FORMSUBMIT_AJAX_ENDPOINT = 'https://formsubmit.co/ajax/mohamed.elhaddad.cs@gmail.com';
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
   app.initContact = function initContact() {
@@ -48,16 +50,6 @@
       formStatus.hidden = false;
     }
 
-    function isLocalEnvironment() {
-      const host = window.location.hostname;
-      return (
-        host === 'localhost' ||
-        host === '127.0.0.1' ||
-        host === '::1' ||
-        window.location.protocol === 'file:'
-      );
-    }
-
     function clearStatus() {
       if (!formStatus) return;
       formStatus.hidden = true;
@@ -87,6 +79,17 @@
       const emailVal = emailInput ? emailInput.value.trim() : '';
       if (!EMAIL_REGEX.test(emailVal)) {
         setFieldError(emailInput, errorEmail, 'Please enter a valid email address.');
+        firstInvalid = firstInvalid || emailInput;
+      } else if (emailVal.toLowerCase() === OWNER_EMAIL) {
+        setFieldError(
+          emailInput,
+          errorEmail,
+          'Please enter your own email address so Mohamed can reply to you.'
+        );
+        showStatus(
+          'info',
+          'Please enter your own email address instead of mohamed.elhaddad.cs@gmail.com.'
+        );
         firstInvalid = firstInvalid || emailInput;
       } else {
         setFieldError(emailInput, errorEmail, '');
@@ -119,13 +122,23 @@
       inputEl.addEventListener('input', function () {
         if (inputEl === nameInput && nameInput.value.trim().length >= 2) {
           setFieldError(nameInput, errorName, '');
-        } else if (inputEl === emailInput && EMAIL_REGEX.test(emailInput.value.trim())) {
-          setFieldError(emailInput, errorEmail, '');
+        } else if (inputEl === emailInput) {
+          const val = emailInput.value.trim();
+          if (EMAIL_REGEX.test(val) && val.toLowerCase() !== OWNER_EMAIL) {
+            setFieldError(emailInput, errorEmail, '');
+            if (formStatus && formStatus.classList.contains('is-info')) {
+              clearStatus();
+            }
+          }
         } else if (inputEl === messageInput && messageInput.value.trim().length >= 10) {
           setFieldError(messageInput, errorMessage, '');
         }
       });
     });
+
+    function fallbackNativeSubmit() {
+      HTMLFormElement.prototype.submit.call(contactForm);
+    }
 
     contactForm.addEventListener('submit', async function (event) {
       event.preventDefault();
@@ -149,6 +162,7 @@
       const templateField = contactForm.querySelector('input[name="_template"]');
       const subjectMetaField = contactForm.querySelector('input[name="_subject"]');
       const captchaField = contactForm.querySelector('input[name="_captcha"]');
+      const nextField = contactForm.querySelector('input[name="_next"]');
 
       const payload = {
         Name: result.name,
@@ -161,10 +175,11 @@
           ? subjectMetaField.value
           : 'New Portfolio Inquiry — mohamedalhaddad.com',
         _captcha: captchaField ? captchaField.value : 'false',
+        _next: nextField ? nextField.value : 'https://mohamedalhaddad.com/#contact',
       };
 
       try {
-        const response = await fetch(FORMSUBMIT_ENDPOINT, {
+        const response = await fetch(FORMSUBMIT_AJAX_ENDPOINT, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -173,13 +188,18 @@
           body: JSON.stringify(payload),
         });
 
+        if (!response.ok) {
+          fallbackNativeSubmit();
+          return;
+        }
+
         const data = await response.json().catch(function () {
-          return {};
+          return null;
         });
 
-        const isSuccess = response.ok && data.success !== false && data.success !== 'false';
-        if (!isSuccess) {
-          throw new Error(data.message || 'Submission failed.');
+        if (!data || data.success === false || data.success === 'false') {
+          fallbackNativeSubmit();
+          return;
         }
 
         showStatus(
@@ -189,20 +209,9 @@
             '! Your message has been sent to Mohamed Alhaddad. I will respond shortly.'
         );
         contactForm.reset();
-      } catch (error) {
-        if (isLocalEnvironment()) {
-          showStatus(
-            'info',
-            'FormSubmit requires a live domain to send emails and will activate automatically once deployed to mohamedalhaddad.com.'
-          );
-        } else {
-          showStatus(
-            'error',
-            'Something went wrong while sending your message. Please try again in a moment or connect via LinkedIn.'
-          );
-        }
-      } finally {
         setLoading(false);
+      } catch (error) {
+        fallbackNativeSubmit();
       }
     });
   };
