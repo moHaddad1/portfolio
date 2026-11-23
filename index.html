@@ -451,7 +451,7 @@
       </div>
     </section>
 
-    <!-- ================= PORTFOLIO SECTION (2 CURATED PROJECTS) ================= -->
+    <!-- ================= PORTFOLIO SECTION (3 CURATED PROJECTS) ================= -->
     <section class="portfolio-section" id="portfolio">
       <div class="portfolio-banner">
         <div class="portfolio-banner-pattern" aria-hidden="true"></div>
@@ -495,7 +495,91 @@
           </div>
 
           <div class="portfolio-grid" id="portfolio-grid">
-            <!-- Project 1: AutoSphere Relational Database -->
+            <!-- Project 1: CodeStart Academy -->
+            <article class="project-card reveal" data-category="ui-ux-web">
+              <div class="project-visual project-visual--codestart" aria-hidden="true">
+                <svg viewBox="0 0 400 210" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                  <defs>
+                    <pattern id="grid-cs" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+                    </pattern>
+                  </defs>
+                  <rect width="400" height="210" fill="#121418" />
+                  <rect width="400" height="210" fill="url(#grid-cs)" />
+
+                  <!-- Top Search / Cheatsheet Bar -->
+                  <rect x="26" y="20" width="348" height="26" rx="3" fill="#1B2027" stroke="rgba(255,255,255,0.22)" stroke-width="1.1" />
+                  <circle cx="40" cy="33" r="4" fill="none" stroke="#90CAF9" stroke-width="1.3" />
+                  <line x1="43" y1="36" x2="46" y2="39" stroke="#90CAF9" stroke-width="1.3" stroke-linecap="round" />
+                  <text x="54" y="36" fill="#9AA4B2" font-family="monospace" font-size="8">Search HTML5 &amp; CSS3 cheatsheet...</text>
+                  <rect x="314" y="25" width="52" height="16" rx="2" fill="#90CAF9" />
+                  <text x="340" y="36" text-anchor="middle" fill="#000000" font-family="Montserrat, sans-serif" font-size="7" font-weight="800">COPY</text>
+
+                  <!-- Live CSS Box Model Visualizer (Left) -->
+                  <rect x="26" y="58" width="184" height="130" rx="4" fill="#1B2027" stroke="rgba(255,255,255,0.28)" stroke-width="1.2" />
+                  <text x="38" y="74" fill="#FFCC80" font-family="monospace" font-size="7.5" font-weight="700">MARGIN: 16px</text>
+                  <rect x="38" y="80" width="160" height="96" rx="3" fill="rgba(255,204,128,0.08)" stroke="#FFCC80" stroke-width="1.2" stroke-dasharray="4 3" />
+                  <text x="48" y="94" fill="#FFFFFF" font-family="monospace" font-size="7">BORDER: 2px</text>
+                  <rect x="48" y="100" width="140" height="66" rx="2" fill="#232933" stroke="#FFFFFF" stroke-width="1.4" />
+                  <text x="58" y="114" fill="#90CAF9" font-family="monospace" font-size="7">PADDING: 12px</text>
+                  <rect x="58" y="120" width="120" height="36" rx="2" fill="rgba(144,202,249,0.16)" stroke="#90CAF9" stroke-width="1.3" />
+                  <text x="118" y="141" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="8.5" font-weight="700">CONTENT BOX</text>
+
+                  <!-- Interactive Quiz & Code Panel (Right) -->
+                  <rect x="224" y="58" width="150" height="72" rx="4" fill="#1B2027" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" />
+                  <text x="236" y="75" fill="#90CAF9" font-family="monospace" font-size="7.8">&lt;section class="box"&gt;</text>
+                  <text x="244" y="90" fill="#E6ECF5" font-family="monospace" font-size="7.6">display: flex;</text>
+                  <text x="244" y="104" fill="#E6ECF5" font-family="monospace" font-size="7.6">padding: 12px;</text>
+                  <text x="236" y="119" fill="#90CAF9" font-family="monospace" font-size="7.8">&lt;/section&gt;</text>
+
+                  <!-- Self-Grading Exercise Status -->
+                  <rect x="224" y="140" width="150" height="48" rx="4" fill="#1B2027" stroke="rgba(144,202,249,0.45)" stroke-width="1.2" />
+                  <circle cx="244" cy="164" r="10" fill="rgba(144,202,249,0.18)" stroke="#90CAF9" stroke-width="1.4" />
+                  <polyline points="239,164 243,168 250,160" fill="none" stroke="#90CAF9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <text x="262" y="160" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="700">QUIZ PASSED</text>
+                  <text x="262" y="173" fill="#9AA4B2" font-family="Open Sans, sans-serif" font-size="7">Instant auto-grade</text>
+                </svg>
+                <div class="project-hover-overlay">
+                  <span class="overlay-badge">HTML5 &bull; CSS3 &bull; JAVASCRIPT</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-tag">UI/UX &amp; Web</span>
+                <h3 class="project-title">CodeStart Academy</h3>
+                <p class="project-description">
+                  Multi-page interactive HTML5 and CSS3 learning platform featuring a live CSS Box Model visualizer, real-time cheatsheet search and filtering, one-click code snippet copying, and self-grading exercises.
+                </p>
+
+                <div class="project-footer">
+                  <ul class="project-stack" aria-label="Technologies used">
+                    <li class="project-pill">HTML5</li>
+                    <li class="project-pill">CSS3</li>
+                    <li class="project-pill">JavaScript</li>
+                  </ul>
+                  <div class="project-links">
+                    <a
+                      href="https://mohaddad1.github.io/codestart-academy/"
+                      target="_blank"
+                      rel="noopener"
+                      class="project-btn project-btn--solid"
+                    >
+                      LIVE DEMO <span aria-hidden="true">&#8599;</span>
+                    </a>
+                    <a
+                      href="https://github.com/moHaddad1/codestart-academy"
+                      target="_blank"
+                      rel="noopener"
+                      class="project-btn project-btn--outline"
+                    >
+                      GITHUB <span aria-hidden="true">&#8599;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: AutoSphere Relational Database -->
             <article class="project-card reveal" data-category="database-systems">
               <div class="project-visual project-visual--db" aria-hidden="true">
                 <svg viewBox="0 0 400 210" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">

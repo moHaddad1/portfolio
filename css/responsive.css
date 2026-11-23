@@ -38,6 +38,12 @@
   .skills-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .portfolio-grid,
+  .portfolio-grid.is-double {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 /* Tablet Portrait & Mobile Stacking */
@@ -103,6 +109,7 @@
   }
 
   .portfolio-grid,
+  .portfolio-grid.is-double,
   .portfolio-grid.is-single {
     grid-template-columns: 1fr;
     max-width: 580px;

@@ -48,6 +48,7 @@
 
       if (portfolioGrid) {
         portfolioGrid.classList.toggle('is-single', visibleCount === 1);
+        portfolioGrid.classList.toggle('is-double', visibleCount === 2);
       }
     }
 

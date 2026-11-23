@@ -94,7 +94,7 @@ a {
   max-width: 816px;
   margin: 0 auto;
   background-color: #ffffff;
-  padding: 48px 54px;
+  padding: 40px 50px;
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
   border-top: 5px solid #000000;
 }
@@ -102,8 +102,8 @@ a {
 /* Header */
 .resume-header {
   text-align: center;
-  padding-bottom: 18px;
-  margin-bottom: 22px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
   border-bottom: 2px solid #1a1a1a;
 }
 
@@ -151,7 +151,7 @@ a {
 
 /* Sections */
 .resume-section {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .resume-section:last-child {
@@ -160,13 +160,13 @@ a {
 
 .resume-section-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #000000;
-  padding-bottom: 5px;
-  margin-bottom: 11px;
+  padding-bottom: 4px;
+  margin-bottom: 9px;
   border-bottom: 1.5px solid #d4d4d4;
 }
 
@@ -195,7 +195,7 @@ a {
 
 /* Projects & Education Entries */
 .resume-entry {
-  margin-bottom: 14px;
+  margin-bottom: 11px;
 }
 
 .resume-entry:last-child {
@@ -208,25 +208,39 @@ a {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 4px 14px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .entry-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.93rem;
+  font-size: 0.91rem;
   font-weight: 700;
   color: #000000;
 }
 
 .entry-meta {
-  font-size: 0.83rem;
+  font-size: 0.81rem;
   font-weight: 600;
   color: #555555;
 }
 
+.entry-meta a,
+.entry-meta-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.entry-meta a:hover,
+.entry-meta-link:hover {
+  color: #000000;
+  border-bottom-color: #000000;
+}
+
 .entry-desc {
-  font-size: 0.89rem;
-  line-height: 1.6;
+  font-size: 0.87rem;
+  line-height: 1.55;
   color: #2d2d2d;
 }
 
@@ -310,7 +324,7 @@ a {
 
 /* ================= STRICT 1-PAGE PRINT / PDF STYLES ================= */
 @page {
-  margin: 0.4in;
+  margin: 0.35in 0.4in;
   size: auto;
 }
 
@@ -340,19 +354,19 @@ a {
   }
 
   .resume-header {
-    padding-bottom: 10pt;
-    margin-bottom: 12pt;
+    padding-bottom: 7pt;
+    margin-bottom: 9pt;
     border-bottom: 1.5pt solid #000000;
   }
 
   .resume-name {
-    font-size: 18pt;
+    font-size: 16.5pt;
     margin-bottom: 2pt;
   }
 
   .resume-role {
-    font-size: 9.5pt;
-    margin-bottom: 6pt;
+    font-size: 9pt;
+    margin-bottom: 4.5pt;
   }
 
   .resume-contact-line {
@@ -361,15 +375,15 @@ a {
   }
 
   .resume-section {
-    margin-bottom: 11pt;
+    margin-bottom: 8.5pt;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .resume-section-title {
-    font-size: 9pt;
-    padding-bottom: 3pt;
-    margin-bottom: 6pt;
+    font-size: 8.6pt;
+    padding-bottom: 2pt;
+    margin-bottom: 4.5pt;
   }
 
   .resume-summary,
@@ -378,27 +392,42 @@ a {
   .entry-bullets,
   .training-item,
   .resume-languages {
-    font-size: 9.2pt;
-    line-height: 1.45;
+    font-size: 8.8pt;
+    line-height: 1.38;
+  }
+
+  .entry-header {
+    margin-bottom: 1.5pt;
   }
 
   .entry-title {
-    font-size: 9.5pt;
+    font-size: 9pt;
   }
 
   .entry-meta,
   .training-meta {
-    font-size: 8.5pt;
+    font-size: 8.2pt;
+  }
+
+  .entry-meta a,
+  .entry-meta-link {
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
   }
 
   .resume-entry {
-    margin-bottom: 8pt;
+    margin-bottom: 6pt;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .skills-list,
   .training-list {
-    gap: 3.5pt;
+    gap: 2.5pt;
+  }
+
+  .training-list {
+    margin-top: 5pt;
   }
 }
